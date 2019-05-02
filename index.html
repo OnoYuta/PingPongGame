@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ピンポンゲーム</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div id="container">
+        <div class="score">
+            <div id="msg">ピンポンゲーム</div>
+            <div id="cpuScore">CPU: 0 / 3</div>
+            <canvas id="mycanvas" width="300" height="400">
+                Canvasに対応したブラウザを用意してください。
+            </canvas>
+            <div id="youScore">YOU: 0 / 3</div>
+        </div>
+        <div id="btn">ゲームをはじめる</div>
+    </div>
+    <div id="mask" class="hidden"></div>
+    <section id="modal" class="hidden">モーダル</section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    
+  </body>
+</html>
