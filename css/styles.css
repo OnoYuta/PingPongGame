@@ -6,20 +6,82 @@ body {
 }
 
 #container {
-  width: 300px;
+  width: 375px;
+  margin: 20px auto;
   text-align: center;
-  margin: 5px auto;
+}
+
+.msg {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+#turn {
+  text-align: center;
+  margin: 0 0 0 5px;
+  transition: 0.8s;
+}
+
+.change {
+  transform: rotateY(360deg);
+}
+
+.rule {
+  font-size: 18px;
+  clear: both;
+  text-align: center;
+  color: #ffffff;
+}
+
+.rule ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+.rule li {
+  flex: 1;
+}
+
+#youLabel {
+  float: left;
+  margin: 0 5px 0 5px;
+}
+
+#you {
+  display: block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #D81159;
+}
+
+#cpuLabel {
+  float: right;
+  margin: 0 5px 0 0;
+}
+
+#cpu {
+  float: right;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #3B413C;
 }
 
 #mycanvas {
-  background: #f5cb5c;
-  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+  padding: 5px;
+  transition: 0.4s;
 }
 
-#btn {
-  clear: both;
-  text-decoration: none;
-  display: block;
+#stage {
+  font-size: 20px;
+}
+
+#dice {
   background: #f06543;
   color: #fff;
   height: 40px;
@@ -27,55 +89,47 @@ body {
   line-height: 40px;
   text-align: center;
   font-size: 18px;
-  margin-top: 15px;
+  margin-top: 10px;
   box-shadow: 0 8px 0 rgba(0, 0, 0, 0.2);
-  position: relative;
-  z-index: 3;
+  cursor: pointer;
+  user-select: none;
 }
 
-#btn.inactive {
+#dice.inactive {
   cursor: default;
   opacity: 0.4;
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
-  margin-top: 19px;
+  margin-top: 14px;
 }
 
-#btn.pressed {
+#dice.pressed {
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
-  margin-top: 19px;
+  margin-top: 14px;
 }
 
-.score {
-  color: #fff;
-  font-size: 20px;
+#stage {
+  display: flex;
 }
 
-.score:after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-#msg {
-  text-align: center;
-  margin: 0 0 0 5px;
-  transition: 0.8s;
-}
-
-#youScore {
+#stepsLeft {
+  margin-top: 15px;
+  text-align: left;
+  color: #ffffff;
   float: left;
-  margin: 5px 0 5px 5px;
-  transition: 0.8s;
 }
 
-#cpuScore {
-  float: right;
-  margin: 5px 5px 5px 0;
-  transition: 0.8s;
+#stepsCount {
+  color: #ffffff;
+  margin-top: 15px;
+  float: left;
+  transition: 0.4s;
+  font-size: 24px;
 }
 
-.rotate {
-  transform: rotateY(360deg);
+#stage:after {
+  display: block;
+  content: "";
+  clear: both;
 }
 
 #mask {
@@ -89,9 +143,9 @@ body {
 }
 
 #modal {
-  background: #fff;
+  background: #ffffff;
   font-size: 24px;
-  width: 330px;
+  width: 375px;
   padding: 20px;
   border-radius: 4px;
   text-align: center;
